@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import "./App.css";
 import abi from "./utils/WavePortal.json";
- const contractAddress = "0x5b5e57Ba9329d13aF2c70a4f5e6ae2629Ea493af";
+ const contractAddress = "0x8f67AeE909E67b70cf929f81cfB448fDA24cE628";
 const contractABI = abi.abi;
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -106,7 +106,7 @@ const getAllWaves = async () => {
         /*
         * Execute the actual wave from your smart contract
         */
-        const waveTxn = await wavePortalContract.hugMe("hug from California");
+        const waveTxn = await wavePortalContract.hugMe("hug from Sanfrancisco");
         console.log("Mining...", waveTxn.hash);
 
         await waveTxn.wait();
@@ -135,7 +135,7 @@ const getAllWaves = async () => {
         </div>
 
         <div className="bio">
-          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+          Connect your Ethereum wallet and Send your Sweet hugs!
         </div>
 
        <button className="waveButton" onClick={wave}>
